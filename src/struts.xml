@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="json-default">
+        <action name="showb" class="action.showbook" method="show">
+            <result name="SUCCESS" type="json"></result>
+        </action><!--网页加载时在表格中显示所有书籍的处理方法-->
+        <action name="change" class="action.editBook" method="changen">
+            <result name="SUCCESS">/welcome.jsp</result>
+        </action><!--改变图书相关信息时的处理方法-->
+        <action name="del" class="action.editBook" method="delbook">
+        	<result name="SUCCESS">/welcome.jsp</result>	
+        </action><!--删除图书时对应的处理类-->
+        <action name="loadd" class="action.showbook" method="shows">
+            <result name="SUCCESS" type="json"></result>
+        </action><!--查询操作时对应的方法-->
+       <!-- <action name="adduser" class="action.editBook" method="addedit">
+        	<result name="SUCCESS">/welcome.jsp</result>
+        </action>--><!--添加作者对应的后端处理的方法-->
+       	<action name="addbook" class="action.editBook" method="addbooks">
+       		<result name="SUCCESS">/welcome.jsp</result>
+       	</action><!--对应添加新的书籍对应的处理程序-->
+    </package>
+</struts>

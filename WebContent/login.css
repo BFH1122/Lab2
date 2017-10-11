@@ -1,0 +1,11 @@
+body{
+	background: blue;
+}
+.btn1{
+	background-size:100px,100px;
+	background-image:url('left.jpg');
+}
+.btn2{
+	background-size:100px,100px;
+	background-image:url('right.jpg');
+}
